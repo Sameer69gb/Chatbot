@@ -21,7 +21,7 @@ def chat():
 
     try:
         response = client.chat.completions.create(
-            model="llama-3.3-70b-versatile",
+            model="openai/gpt-oss-120b",
             messages=[
                 {"role": "system", "content": "You are a friendly helpful chatbot. Keep responses concise. If someone writes in Hindi or Hinglish, reply in the same language."},
                 *[{"role": m["role"], "content": m["content"]} for m in messages]
